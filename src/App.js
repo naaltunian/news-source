@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Title from './components/Title';
 import Display from './components/Display';
+import Navbar from './components/Navbar';
 import CategoryFilter from './components/CategoryFilter';
 import './App.css';
 import axios from 'axios';
 
-const key = ``
+const key = ``;
 
 class App extends Component {
 
@@ -19,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Navbar />
         <Title/>
         <CategoryFilter/>
         <Display/>
