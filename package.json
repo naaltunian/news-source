@@ -6,6 +6,7 @@
     "axios": "^0.18.0",
     "express": "^4.16.3",
     "react": "^16.5.1",
+    "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.1",
     "react-scripts": "1.1.5",
     "semantic-ui-css": "^2.3.3",
