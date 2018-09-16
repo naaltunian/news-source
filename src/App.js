@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Title from './components/Title';
+import DisplayArticle from './components/DisplayArticle';
 import './App.css';
 import axios from 'axios';
 
@@ -15,10 +17,9 @@ class App extends Component {
 
   render() {
     return (
-      <div >
-
-        <h1>Test</h1>
-
+      <div>
+        <Title/>
+        <DisplayArticle/>
       </div>
     );
   }
