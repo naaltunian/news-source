@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Title from './components/Title';
-import DisplayArticle from './components/DisplayArticle';
+import Display from './components/Display';
 import './App.css';
 import axios from 'axios';
 
@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <div>
         <Title/>
-        <DisplayArticle/>
+        <Display />
       </div>
     );
   }
