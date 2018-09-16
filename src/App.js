@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Title from './components/Title';
 import Display from './components/Display';
 import Navbar from './components/Navbar';
+import CategoryFilter from './components/CategoryFilter';
 import './App.css';
 import axios from 'axios';
 
@@ -21,7 +22,9 @@ class App extends Component {
       <div>
         <Navbar />
         <Title/>
-        <Display />
+        <CategoryFilter/>
+        <Display/>
+
       </div>
     );
   }
