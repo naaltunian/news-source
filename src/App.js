@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Title from './components/Title';
 import Display from './components/Display';
+import CategoryFilter from './components/CategoryFilter';
 import './App.css';
 import axios from 'axios';
 
@@ -19,7 +20,9 @@ class App extends Component {
     return (
       <div>
         <Title/>
-        <Display />
+        <CategoryFilter/>
+        <Display/>
+
       </div>
     );
   }
