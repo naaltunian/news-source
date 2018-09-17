@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class DisplayArticle extends Component {
-    render() {
-      return (
-        <div >
-            <h1>Display Article Component</h1>
-        </div>
-      );
-    }
+const DisplayArticle = () => {
+    return (
+      <div>
+        <h1>Display Article Component</h1>
+      </div>
+    );
   }
-  
+
   export default DisplayArticle;
