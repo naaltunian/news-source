@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Title from './components/Title';
 import Navbar from './components/Navbar';
-import CategoryFilter from './components/CategoryFilter';
 import './App.css';
 import News from './components/News';
 import Home from './components/Home';

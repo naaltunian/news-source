@@ -82,5 +82,5 @@ class CategoryFilter extends Component {
       );
     }
   }
-  
+
   export default CategoryFilter;
