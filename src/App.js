@@ -3,32 +3,23 @@ import Title from './components/Title';
 import Navbar from './components/Navbar';
 import CategoryFilter from './components/CategoryFilter';
 import './App.css';
-import axios from 'axios';
 import News from './components/News';
+import Home from './components/Home';
+import About from './components/About';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-let keys = require('./config.js')
 
 class App extends Component {
-  state = {
-    articles: []
-  }
 
-  componentDidMount = (req, res) => {
-    axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${keys.reuters}`)
-    .then(res => {
-      this.setState({articles: res.data.articles});
-    });
-  }
 
   render() {
     return (
       <Router>
         <div>
           <Navbar/>
-          <Route />
-          <Route />
-          <Route />
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/news" component={News}/>
         </div>
       </Router>
     );
