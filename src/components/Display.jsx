@@ -5,10 +5,10 @@ const Display = (props) => {
   return(
     <div>
       <ul>
-        <li>{props.articles.map(article =>  {
-            return <li><a href={article.url} >{article.title}</a></li>
-        }) 
-        }</li>
+        {props.articles.map(article =>  {
+            return <li key={article.title}><a href={article.url} >{article.title}</a></li>
+        })
+        }
       </ul>
     </div>
   );
