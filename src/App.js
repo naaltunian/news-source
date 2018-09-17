@@ -29,13 +29,6 @@ class App extends Component {
         <Display 
         articles={this.state.articles}
         />
-        <ul>
-          <li>{this.state.articles.map(article =>  {
-              return <li><a href={article.url} >{article.title}</a></li>
-          }) 
-          }</li>
-        </ul>
-
       </div>
     );
   }
