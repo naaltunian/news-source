@@ -6,14 +6,18 @@ import CategoryFilter from './components/CategoryFilter';
 import './App.css';
 import axios from 'axios';
 
-const key = ``;
+let keys = require('./config.js')
 
 class App extends Component {
+  state = {
+    results: []
+  }
 
-  newsRequest = () => {
-    axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${key}`)
-    .then((res) => {
-      console.log(res);
+  componentDidMount = (req, res) => {
+    console.log(keys.reuters)
+    axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${keys.reuters}`)
+    .then(res => {
+      console.log(res.data.articles);
     });
   }
 
@@ -24,6 +28,9 @@ class App extends Component {
         <Title/>
         <CategoryFilter/>
         <Display/>
+        <ul>
+          {this.state.results}
+        </ul>
 
       </div>
     );
