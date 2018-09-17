@@ -10,13 +10,13 @@ let keys = require('./config.js')
 
 class App extends Component {
   state = {
-    results: []
+    articles: []
   }
 
   componentDidMount = (req, res) => {
     axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${keys.reuters}`)
     .then(res => {
-      console.log(res.data.articles);
+      this.setState({articles: res.data.articles});
     });
   }
 
@@ -26,9 +26,14 @@ class App extends Component {
         <Navbar />
         <Title/>
         <CategoryFilter/>
-        <Display/>
+        <Display 
+        articles={this.state.articles}
+        />
         <ul>
-          {this.state.results}
+          <li>{this.state.articles.map(article =>  {
+              return <li><a href={article.url} >{article.title}</a></li>
+          }) 
+          }</li>
         </ul>
 
       </div>
