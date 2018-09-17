@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Title from './components/Title';
 import Navbar from './components/Navbar';
 import './App.css';
 import News from './components/News';
@@ -7,9 +6,7 @@ import Home from './components/Home';
 import About from './components/About';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-
 class App extends Component {
-
 
   render() {
     return (
@@ -26,9 +23,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Title/>
-// <CategoryFilter/>
-// <News
-// articles={this.state.articles}
-// />
