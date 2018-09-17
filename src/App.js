@@ -14,7 +14,6 @@ class App extends Component {
   }
 
   componentDidMount = (req, res) => {
-    console.log(keys.reuters)
     axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${keys.reuters}`)
     .then(res => {
       console.log(res.data.articles);
