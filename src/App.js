@@ -16,7 +16,7 @@ class App extends Component {
   componentDidMount = (req, res) => {
     axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${keys.reuters}`)
     .then(res => {
-      console.log(res.data.articles);
+      this.setState({articles: res.data.articles});
     });
   }
 
@@ -26,7 +26,9 @@ class App extends Component {
         <Navbar/>
         <Title/>
         <CategoryFilter/>
-        <Display article={this.state.articles}/>
+        <Display 
+        articles={this.state.articles}
+        />
       </div>
     );
   }
