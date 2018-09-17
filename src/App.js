@@ -10,7 +10,7 @@ let keys = require('./config.js')
 
 class App extends Component {
   state = {
-    results: []
+    articles: []
   }
 
   componentDidMount = (req, res) => {
@@ -23,14 +23,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar/>
         <Title/>
         <CategoryFilter/>
-        <Display/>
-        <ul>
-          {this.state.results}
-        </ul>
-
+        <Display article={this.state.articles}/>
       </div>
     );
   }
