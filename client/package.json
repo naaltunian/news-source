@@ -12,6 +12,7 @@
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.5"
   },
+  "proxy": "http://localhost:5000",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
