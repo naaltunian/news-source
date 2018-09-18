@@ -28,10 +28,10 @@ class Display extends React.Component {
           {this.state.articles.map(article =>  {
             return(
                 <div>
-                    <img key={article.title} src={article.urlToImage} alt={article.title} width='300px' height='200px'/>
-                    <li key={article.title}><a href={article.url} >{article.title}</a></li>
-                    {article.author && <li key={article.title}>{article.author}</li>}
-                    <li key={article.title}>{article.description}</li>
+                    {article.urlToImage && <img key={article.title} src={article.urlToImage} alt={article.title} width='300px' height='200px'/>}
+                    {article.title && <h4 key={article.title}><a href={article.url} >{article.title}</a></h4>}
+                    {article.author && <p key={article.title}>By: {article.author}</p>}
+                    {article.description && <p key={article.title}>{article.description}</p>}
                 </div>
             )
           })
