@@ -10,10 +10,12 @@ class Display extends React.Component {
     articles: []
   }
 
-  componentDidMount = (req, res) => {
-    axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${keys.reuters}`)
-    .then(res => {
-      this.setState({articles: res.data.articles});
+  componentDidMount(req, res) {
+    axios.get(`/api`)
+    .then(({data}) => {
+      this.setState({articles: data})
+    }).catch(err => {
+      console.log(err.message);
     });
     console.log(res);
   }
