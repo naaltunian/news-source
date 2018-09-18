@@ -1,22 +1,23 @@
 {
   "name": "news-source",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naaltunian/news-source.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naaltunian/news-source/issues"
+  },
+  "homepage": "https://github.com/naaltunian/news-source#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "express": "^4.16.3",
-    "react": "^16.5.1",
-    "react-bootstrap": "^0.32.4",
-    "react-dom": "^16.5.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5",
-    "semantic-ui-css": "^2.3.3",
-    "semantic-ui-react": "^0.82.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "express": "^4.16.3"
   }
 }
