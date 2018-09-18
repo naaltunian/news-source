@@ -18,8 +18,8 @@ class CategoryFilter extends Component {
                 <Radio
                     label='All'
                     name='radioGroup'
-                    value='null'
-                    checked={this.state.value === null}
+                    value='All'
+                    checked={this.state.value === 'All'}
                     onChange={this.handleChange}
                 />
                 </Form.Field>
@@ -27,8 +27,8 @@ class CategoryFilter extends Component {
                 <Radio
                     label='Business'
                     name='radioGroup'
-                    value='business'
-                    checked={this.state.value === 'business'}
+                    value='Business'
+                    checked={this.state.value === 'Business'}
                     onChange={this.handleChange}
                 />
                 </Form.Field>
@@ -36,17 +36,17 @@ class CategoryFilter extends Component {
                 <Radio
                     label='Entertainment'
                     name='radioGroup'
-                    value='entertainment'
-                    checked={this.state.value === 'entertainment'}
+                    value='Entertainment'
+                    checked={this.state.value === 'Entertainment'}
                     onChange={this.handleChange}
                 />
                 </Form.Field>
                 <Form.Field>
                 <Radio
-                    label='general'
+                    label='General'
                     name='radioGroup'
                     value='General'
-                    checked={this.state.value === 'general'}
+                    checked={this.state.value === 'General'}
                     onChange={this.handleChange}
                 />
                 </Form.Field>
@@ -54,8 +54,8 @@ class CategoryFilter extends Component {
                 <Radio
                     label='Health'
                     name='radioGroup'
-                    value='health'
-                    checked={this.state.value === 'health'}
+                    value='Health'
+                    checked={this.state.value === 'Health'}
                     onChange={this.handleChange}
                 />
                 </Form.Field>
@@ -63,8 +63,8 @@ class CategoryFilter extends Component {
                 <Radio
                     label='Science'
                     name='radioGroup'
-                    value='science'
-                    checked={this.state.value === 'science'}
+                    value='Science'
+                    checked={this.state.value === 'Science'}
                     onChange={this.handleChange}
                 />
                 </Form.Field>
@@ -72,8 +72,8 @@ class CategoryFilter extends Component {
                 <Radio
                     label='Technology'
                     name='radioGroup'
-                    value='technology'
-                    checked={this.state.value === 'technology'}
+                    value='Technology'
+                    checked={this.state.value === 'Technology'}
                     onChange={this.handleChange}
                 />
                 </Form.Field>
