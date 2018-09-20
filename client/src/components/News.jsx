@@ -2,6 +2,7 @@ import React from 'react';
 import DisplayArticle from './DisplayArticle';
 import axios from 'axios';
 import CategoryFilter from './CategoryFilter';
+import {Grid} from 'semantic-ui-react'
 
 let keys = require('./config.js');
 
@@ -24,9 +25,11 @@ class Display extends React.Component {
     return(
       <div>
         <CategoryFilter />
+        <Grid columns='equal'>
           {this.state.articles.map((article) => {
             return <DisplayArticle article={article} />
           })}
+        </Grid>
       </div>
       );
     }
