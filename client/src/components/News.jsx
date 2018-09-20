@@ -10,14 +10,14 @@ class Display extends React.Component {
     articles: []
   }
 
-  componentDidMount(req, res) {
+  componentDidMount() {
     axios.get(`/api`)
     .then(({data}) => {
       this.setState({articles: data})
+      console.log(this.state.articles);
     }).catch(err => {
       console.log(err.message);
     });
-    console.log(res);
   }
 
   render() {
@@ -25,17 +25,9 @@ class Display extends React.Component {
       <div>
         <CategoryFilter />
         <ul>
-          {this.state.articles.map(article =>  {
-            return(
-                <div>
-                    {article.urlToImage && <img key={article.title} src={article.urlToImage} alt={article.title} width='300px' height='200px'/>}
-                    {article.title && <h4 key={article.title}><a href={article.url} >{article.title}</a></h4>}
-                    {article.author && <p key={article.title}>By: {article.author}</p>}
-                    {article.description && <p key={article.title}>{article.description}</p>}
-                </div>
-            )
-          })
-          }
+          {this.state.articles.map((article) => {
+            return <DisplayArticle article={article} />
+          })}
         </ul>
       </div>
       );
