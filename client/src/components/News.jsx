@@ -24,11 +24,9 @@ class Display extends React.Component {
     return(
       <div>
         <CategoryFilter />
-        <ul>
           {this.state.articles.map((article) => {
             return <DisplayArticle article={article} />
           })}
-        </ul>
       </div>
       );
     }
