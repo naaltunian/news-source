@@ -2,8 +2,13 @@ import React from 'react';
 import DisplayArticle from './DisplayArticle';
 import axios from 'axios';
 import CategoryFilter from './CategoryFilter';
+import {Grid} from 'semantic-ui-react'
 
 let keys = require('./config.js');
+
+const words = {
+  margin: '40px'
+}
 
 class Display extends React.Component {
   state = {
@@ -23,12 +28,14 @@ class Display extends React.Component {
   render() {
     return(
       <div>
-        <CategoryFilter />
-        <ul>
+        <div style={words}>
+          <CategoryFilter />
+        </div>
+        <Grid columns='equal' centered>
           {this.state.articles.map((article) => {
             return <DisplayArticle article={article} />
           })}
-        </ul>
+        </Grid>
       </div>
       );
     }
