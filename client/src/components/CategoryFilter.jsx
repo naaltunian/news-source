@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Button, Container, Divider } from 'semantic-ui-react';
 // import { ButtonToolbar, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
+const words = {
+  margin: '40px'
+}
 
 class CategoryFilter extends Component {
     state = {}
@@ -10,7 +13,7 @@ class CategoryFilter extends Component {
     render() {
       return (
         <div>
-            <Container textAlign='center'><h2>Select Category</h2></Container>
+            <Container textAlign='center'><h2 style={words}>Select Category</h2></Container>
             <Container textAlign="center">
               <Button.Group >
                 <Button>All</Button>

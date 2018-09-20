@@ -6,6 +6,10 @@ import {Grid} from 'semantic-ui-react'
 
 let keys = require('./config.js');
 
+const words = {
+  margin: '40px'
+}
+
 class Display extends React.Component {
   state = {
     articles: []
@@ -24,7 +28,9 @@ class Display extends React.Component {
   render() {
     return(
       <div>
-        <CategoryFilter />
+        <div style={words}>
+          <CategoryFilter />
+        </div>
         <Grid columns='equal' centered>
           {this.state.articles.map((article) => {
             return <DisplayArticle article={article} />
