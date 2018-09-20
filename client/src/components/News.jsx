@@ -25,7 +25,7 @@ class Display extends React.Component {
     return(
       <div>
         <CategoryFilter />
-        <Grid columns='equal'>
+        <Grid columns='equal' centered>
           {this.state.articles.map((article) => {
             return <DisplayArticle article={article} />
           })}
