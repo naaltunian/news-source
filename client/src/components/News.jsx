@@ -28,7 +28,7 @@ class Display extends React.Component {
   render() {
     return(
       <div>
-        <div style={words}>
+        <div className="background" style={words}>
           <CategoryFilter />
         </div>
         <Grid columns='equal' centered>
