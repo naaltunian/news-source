@@ -9,8 +9,14 @@
   text-align: center;
 }
 
-#root {
+/* .background {
   background-image: url(./components/images/parchment.jpg);
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+} */
+
+.background {
+  background: url(./components/images/parchment.jpg) no-repeat center center fixed;;
+  height: 100%;
+  width: 100%;
 }

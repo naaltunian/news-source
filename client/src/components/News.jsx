@@ -28,10 +28,10 @@ class Display extends React.Component {
   render() {
     return(
       <div>
-        <div className="background" style={words}>
+        <div style={words}>
           <CategoryFilter />
         </div>
-        <Grid columns='equal' centered>
+        <Grid className="background" columns='equal' centered>
           {this.state.articles.map((article) => {
             return <DisplayArticle article={article} />
           })}
