@@ -32,8 +32,8 @@ class Display extends React.Component {
           <CategoryFilter />
         </div>
         <Grid className="background" columns='equal' centered>
-          {this.state.articles.map((article) => {
-            return <DisplayArticle article={article} />
+          {this.state.articles.map((article, index) => {
+            return <DisplayArticle key={index} article={article} />
           })}
         </Grid>
       </div>
