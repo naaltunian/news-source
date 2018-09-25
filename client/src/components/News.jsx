@@ -25,11 +25,25 @@ class Display extends React.Component {
     });
   }
 
+  componentDidUpdate() {
+    if(!this.state.category)  {
+      axios.get(`/api/${this.state.category}`)
+        .then(({data}) => {
+          this.setState({articles: data})
+        })
+    }
+  }
+
+  handleChange = (e, { value }) => this.setState({ category: `${value}`  })
+
+
   render() {
     return(
       <div>
         <div style={words}>
-          <CategoryFilter  />
+          <CategoryFilter
+            handleChange={this.handleChange}
+          />
         </div>
         <Grid className="background" columns='equal' centered>
           {this.state.articles.map((article, index) => {

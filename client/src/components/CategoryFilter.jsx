@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Container, Divider } from 'semantic-ui-react';
+import axios from 'axios';
 // import { ButtonToolbar, ToggleButtonGroup, ToggleButton } from 'react-bootstrap';
 
 const words = {
@@ -7,27 +8,22 @@ const words = {
 }
 
 class CategoryFilter extends Component {
-
-    state = {
-      category: ''
-    }
     
-    handleChange = (e, { value }) => this.setState({ category: value  })
-
     render() {
+
       return (
         <div>
             <Container textAlign='center'><h2 style={words}>Select Category</h2></Container>
             <Container textAlign="center">
               <Button.Group >
 
-                <Button onClick={this.handleChange}>All</Button>
-                <Button onClick={this.handleChange}>General</Button>
-                <Button onClick={this.handleChange}>Business</Button>
-                <Button onClick={this.handleChange}>Entertainment</Button>
-                <Button onClick={this.handleChange}>Health</Button>
-                <Button onClick={this.handleChange}>Science</Button>
-                <Button onClick={this.handleChange}>Technology</Button>
+                <Button onClick={this.props.handleChange} value='all'>All</Button>
+                <Button onClick={this.props.handleChange} value='general'>General</Button>
+                <Button onClick={this.props.handleChange} value='business'>Business</Button>
+                <Button onClick={this.props.handleChange} value='entertainment'>Entertainment</Button>
+                <Button onClick={this.props.handleChange} value='health'>Health</Button>
+                <Button onClick={this.props.handleChange} value='science'>Science</Button>
+                <Button onClick={this.props.handleChange} value='technology'>Technology</Button>
 
               </Button.Group>
             </Container>
