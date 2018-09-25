@@ -21,13 +21,13 @@ class CategoryFilter extends Component {
             <Container textAlign="center">
               <Button.Group >
 
-                <Button onClick={this.handleClick}>All</Button>
-                <Button onClick={this.handleClick}>General</Button>
-                <Button onClick={this.handleClick}>Business</Button>
-                <Button onClick={this.handleClick}>Entertainment</Button>
-                <Button onClick={this.handleClick}>Health</Button>
-                <Button onClick={this.handleClick}>Science</Button>
-                <Button onClick={this.handleClick}>Technology</Button>
+                <Button onClick={this.handleChange}>All</Button>
+                <Button onClick={this.handleChange}>General</Button>
+                <Button onClick={this.handleChange}>Business</Button>
+                <Button onClick={this.handleChange}>Entertainment</Button>
+                <Button onClick={this.handleChange}>Health</Button>
+                <Button onClick={this.handleChange}>Science</Button>
+                <Button onClick={this.handleChange}>Technology</Button>
 
               </Button.Group>
             </Container>
