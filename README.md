@@ -13,3 +13,7 @@ Clone the repository and run, ```npm install``` in both the root and client dire
 - Further styling the application
 - Deploy the application
 - Provide further information and analytics through the Wolfram Alpha API and IBM's Watson platform.
+
+---
+
+By Nicholas Altunian and Robert Garcia
