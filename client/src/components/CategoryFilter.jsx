@@ -7,6 +7,7 @@ const words = {
 }
 
 class CategoryFilter extends Component {
+
     state = {
       category: ''
     }
@@ -19,13 +20,15 @@ class CategoryFilter extends Component {
             <Container textAlign='center'><h2 style={words}>Select Category</h2></Container>
             <Container textAlign="center">
               <Button.Group >
-                <Button>All</Button>
-                <Button value={'general'}>General</Button>
-                <Button>Business</Button>
-                <Button>Entertainment</Button>
-                <Button>Health</Button>
-                <Button>Science</Button>
-                <Button>Technology</Button>
+
+                <Button onClick={this.handleClick}>All</Button>
+                <Button onClick={this.handleClick}>General</Button>
+                <Button onClick={this.handleClick}>Business</Button>
+                <Button onClick={this.handleClick}>Entertainment</Button>
+                <Button onClick={this.handleClick}>Health</Button>
+                <Button onClick={this.handleClick}>Science</Button>
+                <Button onClick={this.handleClick}>Technology</Button>
+
               </Button.Group>
             </Container>
 
