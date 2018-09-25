@@ -7,8 +7,11 @@ const words = {
 }
 
 class CategoryFilter extends Component {
-    state = {}
-    handleChange = (e, { value }) => this.setState({ value })
+    state = {
+      category: ''
+    }
+    
+    handleChange = (e, { value }) => this.setState({ category: value  })
 
     render() {
       return (
@@ -17,7 +20,7 @@ class CategoryFilter extends Component {
             <Container textAlign="center">
               <Button.Group >
                 <Button>All</Button>
-                <Button>General</Button>
+                <Button value={'general'}>General</Button>
                 <Button>Business</Button>
                 <Button>Entertainment</Button>
                 <Button>Health</Button>
