@@ -26,7 +26,7 @@ class Display extends React.Component {
   }
 
   componentDidUpdate() {
-    if(!this.state.category)  {
+    if(this.state.category !== '')  {
       axios.get(`/api/${this.state.category}`)
         .then(({data}) => {
           this.setState({articles: data})

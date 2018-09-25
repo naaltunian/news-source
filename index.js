@@ -11,7 +11,7 @@ app.get('/api', async (req, res) => {
 });
 
 app.get('/api/:category', async (req, res) => {
-    let {data} = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=`+req.params.category+`&apiKey=${keys.reuters}`)
+    let {data} = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${req.params.category}&apiKey=${keys.reuters}`)
     res.send(data.articles)
 });
 
