@@ -3,8 +3,7 @@ import DisplayArticle from './DisplayArticle';
 import axios from 'axios';
 import CategoryFilter from './CategoryFilter';
 import {Grid} from 'semantic-ui-react'
-
-let keys = require('./config.js');
+import { timingSafeEqual } from 'crypto';
 
 const words = {
   margin: '40px'
@@ -12,7 +11,8 @@ const words = {
 
 class Display extends React.Component {
   state = {
-    articles: []
+    articles: [],
+    category: ''
   }
 
   componentDidMount() {
@@ -29,7 +29,7 @@ class Display extends React.Component {
     return(
       <div>
         <div style={words}>
-          <CategoryFilter />
+          <CategoryFilter  />
         </div>
         <Grid className="background" columns='equal' centered>
           {this.state.articles.map((article, index) => {
