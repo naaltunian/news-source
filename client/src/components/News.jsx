@@ -4,8 +4,6 @@ import axios from 'axios';
 import CategoryFilter from './CategoryFilter';
 import {Grid} from 'semantic-ui-react'
 
-let keys = require('./config.js');
-
 const words = {
   margin: '40px'
 }
