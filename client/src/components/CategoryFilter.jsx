@@ -9,10 +9,10 @@ const words = {
 class CategoryFilter extends Component {
 
     state = {
-      category: ""
+      category: ''
     }
-
-    handleClick = (e) => this.setState({ category: e.target.value });
+    
+    handleChange = (e, { value }) => this.setState({ category: value  })
 
     render() {
       return (
@@ -20,6 +20,7 @@ class CategoryFilter extends Component {
             <Container textAlign='center'><h2 style={words}>Select Category</h2></Container>
             <Container textAlign="center">
               <Button.Group >
+
                 <Button onClick={this.handleClick}>All</Button>
                 <Button onClick={this.handleClick}>General</Button>
                 <Button onClick={this.handleClick}>Business</Button>
@@ -27,6 +28,7 @@ class CategoryFilter extends Component {
                 <Button onClick={this.handleClick}>Health</Button>
                 <Button onClick={this.handleClick}>Science</Button>
                 <Button onClick={this.handleClick}>Technology</Button>
+
               </Button.Group>
             </Container>
 

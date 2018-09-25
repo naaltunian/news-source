@@ -10,6 +10,11 @@ app.get('/api', async (req, res) => {
     res.send(data.articles)
 });
 
+app.get('/api/:category', async (req, res) => {
+    let {data} = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=`+req.params.category+`&apiKey=${keys.reuters}`)
+    res.send(data.articles)
+});
+
 app.listen(port, function() {
     console.log(`Listening on port ${port}!`)
     })
