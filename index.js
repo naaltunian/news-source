@@ -5,6 +5,8 @@ const app = express();
 
 var port = process.env.PORT || 5000;
 
+app.use(express.static(__dirname + '/client/build'));
+
 app.get('/api', async (req, res) => {
     let { data } = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${keys.reuters}`)
     res.send(data.articles)
